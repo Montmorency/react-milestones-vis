@@ -1,3 +1,7 @@
+## [`main`](https://github.com/Montmorency/react-milestones-vis)
+
+Updating package to point to fork of d3-milestones.
+
 ## [`main`](https://github.com/walterra/react-milestones-vis/tree/main)
 
 No public interface changes since `v0.6.5`.
