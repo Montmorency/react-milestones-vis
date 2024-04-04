@@ -1,17 +1,17 @@
 {
   "name": "react-milestones-vis",
   "version": "0.6.5",
-  "description": "React component for d3-milestones, a d3 based timeline visualization.",
+  "description": "Fork of Walterra's React component for d3-milestones, a d3 based timeline visualization.",
   "keywords": [
     "react",
     "d3",
     "visualization",
     "timeline"
   ],
-  "homepage": "https://github.com/walterra/react-milestones-vis",
+  "homepage": "https://github.com/Montmorency/react-milestones-vis",
   "repository": {
     "type": "git",
-    "url": "https://github.com/walterra/react-milestones-vis.git"
+    "url": "https://github.com/Montmorency/react-milestones-vis"
   },
   "bugs": {
     "url": "https://github.com/walterra/react-milestones-vis/issues"
@@ -47,7 +47,8 @@
     ]
   },
   "dependencies": {
-    "d3-milestones": "github:Montmorency/d3-milestones"
+    "d3-milestones": "github:Montmorency/d3-milestones",
+    "tslib": "^2.6.2"
   },
   "peerDependencies": {
     "@types/react": "^16.12 || ^17.0",
@@ -56,7 +57,7 @@
     "react-dom": "^16.12 || ^17.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-commonjs": "^21.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
