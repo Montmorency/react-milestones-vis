@@ -1,6 +1,6 @@
 {
   "name": "react-milestones-vis",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Fork of Walterra's React component for d3-milestones, a d3 based timeline visualization.",
   "keywords": [
     "react",
@@ -48,16 +48,16 @@
   },
   "dependencies": {
     "d3-milestones": "github:Montmorency/d3-milestones",
+    "rollup-plugin-ts": "^3.4.5",
     "tslib": "^2.6.2"
   },
   "peerDependencies": {
     "@types/react": "^16.12 || ^17.0",
-    "@types/react-dom": "^16.12 || ^17.0",
-    "react": "^16.12 || ^17.0",
-    "react-dom": "^16.12 || ^17.0"
+    "@types/react-dom": "^16.12 || ^17.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
@@ -77,14 +77,13 @@
     "gh-pages": "^3.2.3",
     "postcss": "^8.4.5",
     "prettier": "2.5.1",
-    "react": "^16.12 || ^17.0",
-    "react-dom": "^16.12 || ^17.0",
+    "react": "^17.0.2",
     "react-scripts": "5.0.0",
-    "rollup": "^2.62.0",
+    "rollup": "^2.79.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-ts": "^2.0.5",
-    "typescript": "^4.5.4",
+    "types": "^0.1.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.2",
     "webpack": "^5.65.0"
   },
