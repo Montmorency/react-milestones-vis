@@ -1,6 +1,6 @@
 {
   "name": "react-milestones-vis",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Fork of Walterra's React component for d3-milestones, a d3 based timeline visualization.",
   "keywords": [
     "react",
@@ -17,6 +17,7 @@
     "url": "https://github.com/walterra/react-milestones-vis/issues"
   },
   "license": "Apache-2.0",
+  "type": "module",
   "contributors": [
     "Walter Rafelsberger <walter.rafelsberger@elastic.co>"
   ],

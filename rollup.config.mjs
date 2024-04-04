@@ -21,6 +21,7 @@ export default {
     {
       file: packageJson.module,
       format: 'esm',
+      name: 'react-milestones-viz',
       sourcemap: true,
     },
   ],
