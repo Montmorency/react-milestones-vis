@@ -23,3 +23,6 @@ src/components/milestones/milestones.tsx (1:17)
 
 1 import React, { useMemo, useEffect, useRef, useState, FC } from "react";
 ```
+
+Now we package and deploy:
+   [Life Cycle Scripts](https://docs.npmjs.com/cli/v10/using-npm/scripts#life-cycle-scripts)
