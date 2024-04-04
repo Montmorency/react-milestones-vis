@@ -12,3 +12,14 @@ TS Server fatal error: path.charCodeAt is not a function #99615
 
 
 
+Had to add peer dependencies to get rid of this:
+:wq
+```
+(!) Broken sourcemap
+https://rollupjs.org/troubleshooting/#warning-sourcemap-is-likely-to-be-incorrect
+Plugins that transform code (such as "Typescript") should generate accompanying sourcemaps.
+[!] (plugin Typescript) RollupError: [plugin Typescript] src/components/milestones/milestones.tsx (1:17): Module '"react"' has no exported member 'useMemo'. Did you mean to use 'import useMemo from "react"' instead?
+src/components/milestones/milestones.tsx (1:17)
+
+1 import React, { useMemo, useEffect, useRef, useState, FC } from "react";
+```

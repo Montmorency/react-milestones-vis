@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef, useState, FC } from 'react';
+import React, { useMemo, useEffect, useRef, useState, FC } from "react";
 
 // @ts-ignore Could not find a declaration file for module 'd3-milestones'.
 import milestones from 'd3-milestones';
