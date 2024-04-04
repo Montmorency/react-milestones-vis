@@ -1,3 +1,5 @@
+## [`0.6.7`](https://github.com/Montmorency/react-milestones-vis)
+
 ## [`main`](https://github.com/Montmorency/react-milestones-vis)
 
 Updating package to point to fork of d3-milestones.
