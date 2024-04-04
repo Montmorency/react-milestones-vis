@@ -1,6 +1,6 @@
 {
   "name": "react-milestones-vis",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "Fork of Walterra's React component for d3-milestones, a d3 based timeline visualization.",
   "keywords": [
     "react",
