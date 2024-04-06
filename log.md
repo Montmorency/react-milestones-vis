@@ -26,3 +26,6 @@ src/components/milestones/milestones.tsx (1:17)
 
 Now we package and deploy:
    [Life Cycle Scripts](https://docs.npmjs.com/cli/v10/using-npm/scripts#life-cycle-scripts)
+
+Some updates to storybook:
+    https://storybook.js.org/docs/api/csf

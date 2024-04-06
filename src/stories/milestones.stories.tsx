@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 
 import { Milestones } from '../components/milestones';
 
@@ -11,30 +11,38 @@ import dataCovid19 from '../../node_modules/d3-milestones/src/stories/assets/cov
 import dataUltima from '../../node_modules/d3-milestones/src/stories/assets/ultima-series.json';
 import dataStyles from '../../node_modules/d3-milestones/src/stories/assets/styles.json';
 
+
 export default {
   title: 'react-milestones-vis',
   component: Milestones,
-} as ComponentMeta<typeof Milestones>;
+} as Meta<typeof Milestones>;
 
-const Template: ComponentStory<typeof Milestones> = (args) => (
-  <Milestones {...args} />
-);
 
-export const MilestonesReleases = Template.bind({});
-MilestonesReleases.args = {
-  optimize: true,
-  aggregateBy: 'day',
-  mapping: {
-    timestamp: 'timestamp',
-    text: 'detail',
-    url: 'giturl',
-  },
-  urlTarget: '_blank',
+type Story = StoryObj<typeof Milestones>;
+
+
+export const MilestonesReleases : Story = {
+    args : { optimize: true,
+           aggregateBy: 'day',
+           mapping: {
+                timestamp: 'timestamp',
+                text: 'detail',
+                url: 'giturl',
+            },
+             urlTarget: '_blank',
   data: dataMilestones,
+}
 };
 
-export const EventsAPI = Template.bind({});
-EventsAPI.args = {
+/*
+
+const Template: StoryObj<typeof Milestones> = (args) => (
+  <Milestones {...args} />
+);
+export const MilestonesReleases = Template.bind({});
+
+export const EventsAPI = {
+    args = {
   optimize: true,
   aggregateBy: 'day',
   mapping: {
@@ -106,3 +114,4 @@ Styles.args = {
   },
   data: dataStyles,
 };
+*/

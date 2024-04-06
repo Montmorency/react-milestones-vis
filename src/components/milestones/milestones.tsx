@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef, useState, FC } from "react";
+import React, { useEffect, useRef, useState, FC } from "react";
 
 // @ts-ignore Could not find a declaration file for module 'd3-milestones'.
 import milestones from 'd3-milestones';
@@ -6,6 +6,7 @@ import milestones from 'd3-milestones';
 import '../../../node_modules/d3-milestones/build/d3-milestones.css';
 
 import { getDefaults } from './defaults';
+
 import {
   isAggregateBy,
   isDistribution,
@@ -38,8 +39,10 @@ interface IMilestones {
  * React Milestones Visualization
  */
 export const Milestones: FC<MilestonesOptions> = (props) => {
-  const milestonesDivEl = useRef(null);
+
   const [vis, setVis] = useState<IMilestones>();
+  const milestonesDivEl = useRef(null);
+
 
   useEffect(() => {
     if (milestonesDivEl.current !== null) {

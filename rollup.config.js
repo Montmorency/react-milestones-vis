@@ -1,13 +1,13 @@
 import resolve from '@rollup/plugin-node-resolve';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript'
 
 import postcss from 'rollup-plugin-postcss';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import visualizer from 'rollup-plugin-visualizer';
 import ts from 'rollup-plugin-ts';
 import json from '@rollup/plugin-json';
 
-import visualizer from 'rollup-plugin-visualizer';
 
 
 import { readFileSync } from 'fs';
@@ -17,27 +17,25 @@ const extensions = ['.js', '.ts', '.jsx', '.tsx'];
 
 const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
-
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: './src/index.ts',
-  output:[{
+  output:[
+    {
       file: packageJson.main,
-      format: 'cjs',
       name: 'react-milestones-vis',
+      format: 'cjs',
       sourcemap: true
     },
     {
       file: packageJson.module,
+      name: 'react-milestones-vis',
       format: 'esm',
-      sourcemap: true,
-    }],
+      sourcemap: true
+    }
+],
   plugins: [
-    peerDepsExternal(),
-    resolve({
-            browser: true,
-            dedupe: ['react'],
-        }),
+    peerDepsExternal(), //adds package peerdeps
+    resolve(),
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
@@ -46,3 +44,5 @@ export default {
   ],
   external: ['react', 'react-dom'],
 };
+
+
