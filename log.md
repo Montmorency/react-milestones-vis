@@ -29,3 +29,12 @@ Now we package and deploy:
 
 Some updates to storybook:
     https://storybook.js.org/docs/api/csf
+
+
+npm link could be causing pain see this issue:
+
+[Hooks error on React library compiled with Rollup.js](https://github.com/facebook/react/issues/14721)
+
+I can’t guess what’s wrong in your particular setup but I’ve described the issue: you’ll see it when you have two Reacts in the resulting bundle. Check the bundle contents. I can’t help you with setting up Rollup, what its errors mean, or how Node resolutions works — just the React part which is definitely related to that.
+
+Npm link is known for causing this because webpack would “see” React both in your lib folder and in your app folder, and would include both of them in the bundle. A common workaround is to npm link back from your lib’s node_modules/react into your app’s React copy.
